@@ -41,5 +41,6 @@ app.use("/public", express.static(path.join(__dirname, "collaborative-code-edito
 app.get("*", (_req, res) => {
   res.sendFile(path.resolve(__dirname, "collaborative-code-editor-client", "index.html"));
 });
+console.log(`Server starting on port ${process.env.PORT || 3000}`);
 
 server.listen(process.env.PORT || 3000);
